@@ -1,0 +1,14 @@
+Urgent Fixes:
+1. remove / at end when creating project and adding targets.
+
+Add:
+1. Add a config.json file where we store these configs:
+- SecLists Location
+
+2. Adding Selecter options
+3. 
+
+Add Later:
+1. Make some port specification.
+2. Add State System.
+

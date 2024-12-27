@@ -1,0 +1,33 @@
+[ 
+  {
+    "heading": "Enumeration [1/5]",
+    "commands": ["BurpSuite Fast Scan"],
+    "state_color":"grey",
+    "state":"Default",
+    "par":"BurpSuite Walking, Feature Pentest"
+  },
+  {
+    "heading": "Directory Enumeration [2/5]",
+    "commands": ["gobuster dir -u $target -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words.txt -o $tpath/dir.txt --no-color -x txt,php,html","dirsearch -u $target -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt -o $tpath/dir.txt -e txt,php -t 20 -f ","ffuf --request-proto http -request dir_req.txt -w /opt/SecLists/Discovery/Web-Content/raft-small-words-lowercase.txt -r -t 30 -o $tpath/scans/dir.txt","ffuf -u $target/FUZZ -w /usr/share/seclists/Discovery/Web-Content/api/api-endpoints-res.txt -o $tpath/ffuf_api.txt"],
+    "state_color":"grey",
+    "state":"Default"
+  },
+  {
+    "heading": "Parameter Fuzzing [3/5]",
+    "commands": ["ffuf -u $target/?style=FUZZ -w /home/hoh/w/exploits/wordlists/fuzz-Bo0oM-friendly.txt","Burp Suite ParamMiner","arjun -u $target"],
+    "state_color":"grey",
+    "state":"Default"
+  },
+  {
+    "heading": "CMS Scans (if applicable) [4/5]",
+    "commands": ["<service name> Hacktricks","wpscan --url $target --enumerate v","sudo wpscan -v --rua -t 20 -e vp,t,tt,cb,dbe,u,m --plugins-detection aggressive --url $target --api-token api","sudo wpscan -v --rua -t 20 -e vp,t,tt,cb,dbe,u,m --plugins-detection aggressive --url {} --api-token api >> $tpath/wpscan.txt","joomscan --url $target", "command6"],
+    "state_color":"grey",
+    "state":"Default"
+  },
+  {
+    "heading": "CVEs [5/5]",
+    "commands": ["searchsploit Service V","Google"],
+    "state_color":"grey",
+    "state":"Default"
+  }
+]
