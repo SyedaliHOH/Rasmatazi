@@ -1,2 +1,0 @@
-1. Dont use same domain in different ways:
-

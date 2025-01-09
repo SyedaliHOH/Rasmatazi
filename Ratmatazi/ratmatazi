@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cd /home/hoh/w/Framework/Ratmatazi_1 && npm test

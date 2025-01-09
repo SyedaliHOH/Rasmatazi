@@ -1,1 +1,0 @@
-Be careful and write "book.Title" and not "book.title" because the "Books" table was created using capital letters as initials for column names.
