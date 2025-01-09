@@ -1,5 +1,5 @@
 
-# Ratmatazi 0.2: A Web-Pentest Framework for Organized and Effective Testing
+# Ratmatazi: Web-Pentest Framework for Organized and Effective Testing
 
 ## Description:
 
@@ -20,8 +20,10 @@ npm i
 npm start
 ```
 
-## Future Features:
+## Future Plans:
 
 - Make Layout more productive and easier.
 - Add custom Template making it easier to navigate between them
 - Add Proper templates of Bug Bounty Hunting and Web Peneteration Testing.
+
+Current Version: 0.2
