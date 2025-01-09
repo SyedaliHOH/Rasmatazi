@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project - <%= projectName %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header>
+    <%- include("_header", { openProject: req.session.openProject, req }) -%>
+  </header>
+  <main class="container">
+    <h1 class="mt-4">Project: <%= projectName %></h1>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Targets:</h3>
+        <ul>
+          <% links.forEach((link) => { %>
+            <li>
+              <a href="<%= link.url %>" target="_blank"><%= link.link %></a>
+            </li>
+          <% }); %>
+        </ul>
+        <form action="/add-target/<%= projectName %>" method="post" enctype="application/x-www-form-urlencoded">          <label for="add-target"></label>
+          <input type="text" id="add-target" name="add-target" placeholder="Enter target URL">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+    </div>
+    
+    <br>
+    <%- include("_footer") -%>
+  </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+1. Commands and scripts:
+a. Hard Automation of Directories and saving:
+waybackurls
+Google Dorking
+Brute-Force
+Crawling
+Burp_Suite_Links
+
+b. CodeBase Analyzing
+
+c. Breaches Platform
+
+2. .api file for replacing $api in codeBoxes.json
+
+3. Create a full bug bounty codeBoxes template
+
+4. Bug Fixes:
+- Optimize "Open Terminal" to run in all Desktop Environments.
