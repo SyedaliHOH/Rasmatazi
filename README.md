@@ -25,5 +25,6 @@ npm start
 - Make Layout more productive and easier.
 - Add custom Template making it easier to navigate between them
 - Add Proper templates of Bug Bounty Hunting and Web Peneteration Testing.
+- Many more features will be added as we continue to refine the tool based on user feedback.
 
 Current Version: 0.2
